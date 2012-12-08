@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Prestige_Debitobb>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Prestige_Debitobb>
+    </modules>
+</config>

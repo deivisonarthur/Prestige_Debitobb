@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <sections>
+        <payment>
+            <groups>
+                <debitobb translate="label" module="payment">
+                	<label>Débito Banco do Brasil</label>
+					<sort_order>670</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label">
+							<label>Enabled</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+							<comment>Deseja habilitar o módulo de débito online Banco do Brasil?</comment>
+						</active>
+						<title translate="label">
+							<label>Title</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+							<comment>Título que deseja que apareça na tela do cliente</comment>
+						</title>
+						<order_status translate="label">
+							<label>Status dos novos pedidos</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_order_status_new</source_model>
+					  		<sort_order>3</sort_order>
+					  		<show_in_default>1</show_in_default>
+					  		<show_in_website>1</show_in_website>
+					  		<show_in_store>0</show_in_store>
+							<comment>O Status para os novos pedidos utilizando esse módulo, mesmo status que ativa segunda via para o cliente e para o Admin</comment>
+				      	</order_status>
+				      	<idconv translate="label">
+							<label>Código do convênio</label>
+							<frontend_type>text</frontend_type>
+					  		<sort_order>4</sort_order>
+					  		<show_in_default>1</show_in_default>
+					  		<show_in_website>1</show_in_website>
+					  		<show_in_store>0</show_in_store>
+							<comment>Código do convênio de Comércio Eletrônico fornecido pelo Banco</comment>
+				      	</idconv>
+				      	<idconvc translate="label">
+							<label>Código do convênio de Cobrança</label>
+							<frontend_type>text</frontend_type>
+					  		<sort_order>5</sort_order>
+					  		<show_in_default>1</show_in_default>
+					  		<show_in_website>1</show_in_website>
+					  		<show_in_store>0</show_in_store>
+							<comment>Código do convênio de Cobrança fornecido pelo Banco</comment>
+				      	</idconvc>
+				      	<url_retorno translate="label">
+							<label>URL de retorno</label>
+							<frontend_type>text</frontend_type>
+					  		<sort_order>5</sort_order>
+					  		<show_in_default>1</show_in_default>
+					  		<show_in_website>1</show_in_website>
+					  		<show_in_store>0</show_in_store>
+							<comment>Url que retorná a loja, caso o cliente solicite, após o pagamento no banco, avisando que realizou o pagamento</comment>
+				      	</url_retorno>
+				      	<url_informa translate="label">
+							<label>URL de irformação</label>
+							<frontend_type>text</frontend_type>
+					  		<sort_order>6</sort_order>
+					  		<show_in_default>1</show_in_default>
+					  		<show_in_website>1</show_in_website>
+					  		<show_in_store>0</show_in_store>
+							<comment>Url que informará automaticamente a loja quando um pagamento for realizado</comment>
+				      	</url_informa>
+					</fields>
+                </debitobb>
+            </groups>
+        </payment>
+    </sections>
+</config>

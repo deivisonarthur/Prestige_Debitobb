@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Prestige_Debitobb>
+         	<version>1.0.0</version>
+         	<depends>
+				<Mage_Payment />
+			</depends>
+      	</Prestige_Debitobb>      	
+    </modules>   
+    
+    <global>
+		<models>
+			<debitobb>
+				<class>Prestige_Debitobb_Model</class>
+			</debitobb>
+		</models>
+		
+		<helpers>
+			<debitobb>
+				<class>Prestige_Debitobb_Helper</class>
+			</debitobb>
+		</helpers>
+		
+		<blocks>
+            <debitobb>
+                <class>Prestige_Debitobb_Block</class>
+            </debitobb>
+        </blocks>
+		
+		<resources>
+			<debitobb_setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</debitobb_setup>
+			<debitobb_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </debitobb_write>
+            <debitobb_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </debitobb_read>
+		</resources>
+	</global>
+	
+	<frontend>
+		<routers>
+			<debitobb>
+				<use>standard</use>
+				<args>
+					<module>Prestige_Debitobb</module>
+					<frontName>debitobb</frontName>
+				</args>
+			</debitobb>
+		</routers>
+	</frontend>
+	
+	<default>
+		<payment>
+			<debitobb>
+				<active>0</active>
+				<url_retorno>/</url_retorno>
+				<url_informa>/</url_informa>
+				<model>Prestige_Debitobb_Model_standard</model>
+			</debitobb>
+		</payment>
+	</default>
+				
+	
+</config>
